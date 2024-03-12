@@ -8,6 +8,7 @@ import { getPostsList } from './settings/reducers/postsSlice/postsThunk/postsThu
 import { getPostById } from './settings/reducers/postSlice/postThunk/postThunk';
 import { getPhotos } from './settings/reducers/photosSlice/photosThunk/photosThunk';
 import { getPhotoById } from './settings/reducers/photoSlice/photoThunk/photoThunk';
+import Header from './components/Header';
 
 const Wrapper=styled.main` 
 background: ${(props)=>props.theme=='true'?'darkblue':"grey"};
@@ -32,7 +33,7 @@ function App() {
   return (
     
         <Wrapper className='wrapper' id='wrapper'  >
-        
+        <Header></Header>
         </Wrapper>
   );
 }
