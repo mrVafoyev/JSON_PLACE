@@ -11,7 +11,7 @@ console.log('filtered',filteredArray)
   return (
     <GENERALPAGECONTAINER>
       <ol>
-        {filteredArray.map(item=><li><img width='15px' height='20px' src={item.url}/></li>)}
+        {/* {filteredArray.map(item=><li><img width='15px' height='20px' src={item.url}/></li>)} */}
       </ol>
     </GENERALPAGECONTAINER>
   )
