@@ -20,20 +20,6 @@ import LAYOUT from './app/LAYOUT';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-    <BrowserRouter>
-        <Routes>
-            <Route element={<LAYOUT/>}>
-                <Route path='/' element={<HOME/>}></Route>
-                <Route path='/users' element={<USERS/>}></Route>
-                <Route path='/user' element={<USER/>}></Route>
-                <Route path='/todo' element={<TODO/>}></Route>
-                <Route path='/todos' element={<TODOS/>}></Route>
-                <Route path='/photos' element={<Photos/>}></Route>
-                <Route path='/photo' element={<PHOTO_PAGE/>}></Route>
-                <Route path='*' element={<NOTFOUND/>}></Route>
-            </Route>
-        </Routes>
-    </BrowserRouter>
      <App />
      </Provider>
    
