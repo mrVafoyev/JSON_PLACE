@@ -17,44 +17,43 @@ import TODOS from './app/pages/TODOS';
 import Photos from './app/pages/PHOTOS';
 import PHOTO_PAGE from './app/pages/PHOTOS/PHOTO';
 import NOTFOUND from './app/pages/NOTFOUND';
+import POSTS from './app/pages/POSTS';
+import POST from './app/pages/POSTS/POST/INDEX.JS';
 
-
-const Wrapper=styled.main` 
-background: ${(props)=>props.theme=='true'?'darkblue':"grey"};
+const Wrapper = styled.main` 
+background: ${(props) => props.theme == 'true' ? 'darkblue' : "grey"};
 width: 100%;
 height: 95vh;
 `
 
 function App() {
-  
-  
-  const dispatch=useDispatch()
+
+  const dispatch = useDispatch()
   dispatch(getUsersList())
   dispatch(getUserById(3))
   dispatch(getPostsList())
   dispatch(getPostById(5))
   dispatch(getPhotos())
   dispatch(getPhotoById(5))
-  
-  
-
 
   return (
-  <Wrapper>
-        <BrowserRouter>
+    <Wrapper>
+      <BrowserRouter>
         <Routes>
-            <Route element={<LAYOUT/>}>
-                <Route path={'/home'} element={<HOME/>}></Route>
-                <Route path='/users' element={<USERS/>}></Route>
-                <Route path='/user' element={<USER/>}></Route>
-                <Route path='/todo' element={<TODO/>}></Route>
-                <Route path='/todos' element={<TODOS/>}></Route>
-                <Route path='/photos' element={<Photos/>}></Route>
-                <Route path='/photo' element={<PHOTO_PAGE/>}></Route>
-                <Route path='*' element={<NOTFOUND/>}></Route>
-            </Route>
+          <Route element={<LAYOUT />}>
+            <Route path={'/home'} element={<HOME />}></Route>
+            <Route path='/users' element={<USERS />}></Route>
+            <Route path='/user' element={<USER />}></Route>
+            <Route path='/todo' element={<TODO />}></Route>
+            <Route path='/todos' element={<TODOS />}></Route>
+            <Route path='/photos' element={<Photos />}></Route>
+            <Route path='/photo' element={<PHOTO_PAGE />}></Route>
+            <Route path='/posts' element={<POSTS />}></Route>
+            <Route path='/post' element={<POST />}></Route>
+            <Route path='*' element={<NOTFOUND />}></Route>
+          </Route>
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
     </Wrapper>
   );
 }

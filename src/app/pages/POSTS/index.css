@@ -1,0 +1,12 @@
+.li_container{
+    width: 300px;
+    background-color: white;
+    border: 5px solid orange;
+    border-radius: 15px;
+    font-weight: 650;
+    margin: 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

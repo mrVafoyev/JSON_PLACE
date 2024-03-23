@@ -6,7 +6,7 @@ export default function Header() {
     
   return (
     <HeaderContainer>
-        <LOGO>Muzaffar Blog</LOGO>
+        <LOGO>JSON Blog</LOGO>
         <NAVBAR>
             <LIST_ROUTING link="home" text="home" type="text"/>
             <LIST_ROUTING link="posts" text="posts" type="text"/>
